@@ -3,8 +3,9 @@ version: '3.7'
 
 services:
 
-  db:
+  postgres:
     image: postgres
+    container_name: db_server
     restart: always
     environment:
       POSTGRES_PASSWORD: example
@@ -12,14 +13,13 @@ services:
       - postgres-data:/var/lib/postgresql/data
     ports:
       - 5432:5432
-
   adminer:
     image: adminer
+    container_name: adminer
     restart: always
     ports:
       - 8080:8080
     depends_on:
-      - db
-
+      - postgres
 volumes:
   postgres-data:
