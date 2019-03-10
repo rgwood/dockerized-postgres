@@ -16,7 +16,7 @@ services:
   postgrest:
     image: postgrest/postgrest
     ports:
-      - "3000:3000"
+      - "3001:3000"
     links:
       - postgres:postgres
     environment:
