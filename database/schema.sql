@@ -91,6 +91,14 @@ ALTER TABLE ONLY public.article_text
 
 
 --
+-- Name: article_text article_text_article_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.article_text
+    ADD CONSTRAINT article_text_article_id_fkey FOREIGN KEY (article_id) REFERENCES public.article(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
 -- PostgreSQL database dump complete
 --
 
