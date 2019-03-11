@@ -17,4 +17,8 @@
 `docker-machine start postgres-adminer`
 
 #### Backup database
-`docker exec <CONTAINER_NAME> pg_dump <DATABASE_NAME> -U postgres > db-backup.sql
+Schema only
+`docker exec db_server pg_dump scrapbook -U postgres --schema-only > database/schema.sql`
+
+Data only
+`docker exec db_server pg_dump scrapbook -U postgres --data-only > database/data.sql`
