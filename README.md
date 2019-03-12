@@ -18,10 +18,17 @@
 
 #### Backup database
 Schema only
-`docker exec db_server pg_dump scrapbook -U postgres --schema-only > database/schema.sql`
+
+`docker exec scrapbook_db_server pg_dump scrapbook -U postgres --schema-only > database/schema.sql`
 
 Data only
-`docker exec db_server pg_dump scrapbook -U postgres --data-only > database/data.sql`
+
+`docker exec scrapbook_db_server pg_dump scrapbook -U postgres --data-only > database/data.sql`
+
+#### Restore database
+
+`cat database/schema.sql | docker exec -i scrapbook_db_server psql -U postgres scrapbook`
+`cat database/data.sql | docker exec -i scrapbook_db_server psql -U postgres scrapbook`
 
 #### Copy static files to nginx serve directory
 
