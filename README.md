@@ -28,6 +28,7 @@ Data only
 #### Restore database
 
 `cat database/schema.sql | docker exec -i scrapbook_db_server psql -U postgres scrapbook`
+
 `cat database/data.sql | docker exec -i scrapbook_db_server psql -U postgres scrapbook`
 
 #### Copy static files to nginx serve directory
