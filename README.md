@@ -22,3 +22,10 @@ Schema only
 
 Data only
 `docker exec db_server pg_dump scrapbook -U postgres --data-only > database/data.sql`
+
+#### Copy static files to nginx serve directory
+
+`docker cp LOCATION_ON_WORKSTATION/. scrapbook_nginx:/usr/share/nginx/html`
+
+Ex:
+`docker cp ~/source/next-tailwind/out/. scrapbook_nginx:/usr/share/nginx/html`

@@ -33,5 +33,13 @@ services:
       - 8080:8080
     depends_on:
       - postgres
+  nginx:
+    image: nginx
+    container_name: scrapbook_nginx
+    ports:
+      - 80:80
+    volumes:
+      - nginx-static-serve:/usr/share/nginx/html
 volumes:
   postgres-data:
+  nginx-static-serve:
