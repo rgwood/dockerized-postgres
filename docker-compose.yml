@@ -4,7 +4,7 @@ version: '3.7'
 services:
   postgres:
     image: postgres
-    container_name: db_server
+    container_name: scrapbook_db_server
     restart: always
     environment:
       POSTGRES_PASSWORD: example
@@ -15,6 +15,7 @@ services:
       - 5432:5432
   postgrest:
     image: postgrest/postgrest
+    container_name: scrapbook_postgrest
     ports:
       - "3001:3000"
     links:
@@ -27,7 +28,7 @@ services:
       - postgres
   adminer:
     image: adminer
-    container_name: adminer
+    container_name: scrapbook_adminer
     restart: always
     ports:
       - 8080:8080
