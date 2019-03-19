@@ -31,7 +31,7 @@ CREATE TABLE public.article (
 );
 
 
-ALTER TABLE public.article OWNER TO postgres;
+ALTER TABLE public.article OWNER TO admin;
 
 --
 -- Name: Article_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -46,7 +46,7 @@ CREATE SEQUENCE public."Article_id_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Article_id_seq" OWNER TO postgres;
+ALTER TABLE public."Article_id_seq" OWNER TO admin;
 
 --
 -- Name: Article_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -65,7 +65,7 @@ CREATE TABLE public.article_text (
 );
 
 
-ALTER TABLE public.article_text OWNER TO postgres;
+ALTER TABLE public.article_text OWNER TO admin;
 
 --
 -- Name: article id; Type: DEFAULT; Schema: public; Owner: postgres
