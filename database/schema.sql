@@ -20,7 +20,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: article; Type: TABLE; Schema: public; Owner: postgres
+-- Name: article; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public.article (
@@ -34,7 +34,7 @@ CREATE TABLE public.article (
 ALTER TABLE public.article OWNER TO admin;
 
 --
--- Name: Article_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Article_id_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Article_id_seq"
@@ -49,14 +49,14 @@ CREATE SEQUENCE public."Article_id_seq"
 ALTER TABLE public."Article_id_seq" OWNER TO admin;
 
 --
--- Name: Article_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Article_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Article_id_seq" OWNED BY public.article.id;
 
 
 --
--- Name: article_text; Type: TABLE; Schema: public; Owner: postgres
+-- Name: article_text; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public.article_text (
@@ -68,14 +68,14 @@ CREATE TABLE public.article_text (
 ALTER TABLE public.article_text OWNER TO admin;
 
 --
--- Name: article id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: article id; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public.article ALTER COLUMN id SET DEFAULT nextval('public."Article_id_seq"'::regclass);
 
 
 --
--- Name: article Article_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: article Article_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public.article
@@ -83,7 +83,7 @@ ALTER TABLE ONLY public.article
 
 
 --
--- Name: article_text article_text_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: article_text article_text_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public.article_text
@@ -91,7 +91,7 @@ ALTER TABLE ONLY public.article_text
 
 
 --
--- Name: article_text article_text_article_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: article_text article_text_article_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public.article_text

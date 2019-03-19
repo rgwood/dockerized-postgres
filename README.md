@@ -19,11 +19,11 @@
 #### Backup database
 Schema only
 
-`docker exec scrapbook_db_server pg_dump scrapbook -U postgres --schema-only > database/schema.sql`
+`docker exec scrapbook_db_server pg_dump scrapbook -U admin --schema-only > database/schema.sql`
 
 Data only
 
-`docker exec scrapbook_db_server pg_dump scrapbook -U postgres --data-only > database/data.sql`
+`docker exec scrapbook_db_server pg_dump scrapbook -U admin --data-only > database/data.sql`
 
 #### Restore database
 
