@@ -37,3 +37,11 @@ Data only
 
 Ex:
 `docker cp ~/source/next-tailwind/out/. scrapbook_nginx:/usr/share/nginx/html`
+
+#### Open Bash in a Docker container
+
+`docker exec -ti scrapbook_db_server /bin/bash`
+
+#### Open psql in a Docker container
+
+`docker exec -i scrapbook_db_server psql -U admin adventureworks`
