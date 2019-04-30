@@ -24,7 +24,7 @@ services:
     environment:
       PGRST_DB_URI: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/scrapbook
       PGRST_DB_SCHEMA: public
-      PGRST_DB_ANON_ROLE: postgres #In production this role should not be the same as the one used for the connection
+      PGRST_DB_ANON_ROLE: admin #In production this role should not be the same as the one used for the connection
     depends_on:
       - postgres
   adminer:
